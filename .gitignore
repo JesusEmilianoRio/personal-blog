@@ -1,0 +1,25 @@
+# Dependencias
+node_modules/
+
+# Variables de entorno
+.env
+
+# Archivos de logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos del sistema (dependiendo del SO/editor)
+.DS_Store
+Thumbs.db
+
+# Archivos de configuración de VSCode (opcional si no quieres compartirlos)
+.vscode/
+
+# Lock files (opcional: mantener uno solo si usas npm o yarn, no ambos)
+yarn.lock
+# package-lock.json (solo si prefieres usar yarn en lugar de npm)
+
+# Archivos temporales
+*.log
+*.tmp
