@@ -12,8 +12,10 @@ const port = process.env.SERVER_PORT || 3000;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+//Static Files
+app.use(express.static(path.join(__dirname, 'src', 'public')));
 
-//Routing
+//Routig to render HTML
 app.get('/', (req, res) => {
     res.send("Hola mundo");
 });
@@ -25,6 +27,14 @@ app.get('/login', (req, res) => {
 app.get('/register', (req, res) => {
     res.sendFile(path.join(__dirname, 'src', 'public', 'register.html'));
 });
+
+
+//Routing to process data.
+app.post('/api/login', (req, res) => {
+    const userConfirmation = req.body;
+
+    res.send({message : "Inició sesion correctamente."});
+})
 
 
 //Listen on specified port.
